@@ -340,8 +340,12 @@ body {
       }
 
       @include media-md('down') {
-        max-width: 260px;
+        max-width: 340px;
         padding-right: 70px;
+      }
+
+      @media(max-height: 680px) {
+        max-width: 240px;
       }
     }
 
