@@ -4914,9 +4914,8 @@ textarea.form-control {
   right: 0;
   max-width: 65vw;
   top: 50%;
-  transform: translateY(-150%);
+  transform: translateY(150%);
   opacity: 0;
-  transition: 0.5s;
 }
 @media (max-width: 1600px) {
   .section__img {
@@ -4967,7 +4966,6 @@ textarea.form-control {
   text-transform: uppercase;
   margin-bottom: 50px;
   opacity: 0;
-  transform: translateX(100%);
 }
 @media (max-width: 1600px) {
   .section__title {
@@ -4990,7 +4988,6 @@ textarea.form-control {
   max-width: 544px;
   font-size: 20px;
   opacity: 0;
-  transform: translateX(100%);
 }
 @media screen and (max-width: 1022.98px) {
   .section__desc {
@@ -5003,7 +5000,6 @@ textarea.form-control {
   gap: 16px;
   margin-top: 50px;
   opacity: 0;
-  transform: translateX(100%);
 }
 @media screen and (max-width: 1399.98px) {
   .section-action {
@@ -5075,7 +5071,6 @@ textarea.form-control {
   grid-template-columns: repeat(2, auto);
   gap: 50px;
   opacity: 0;
-  transform: translateX(100%);
 }
 @media screen and (max-width: 1399.98px) {
   .section-advantages {
@@ -5133,7 +5128,7 @@ textarea.form-control {
   right: 70px;
   transform: translateY(-50%);
   max-width: 40vw;
-  transform: translateY(150%);
+  transform: translateY(50%);
   opacity: 0;
 }
 @media screen and (max-width: 1022.98px) {
@@ -5431,7 +5426,7 @@ textarea.form-control {
 .crackers-img {
   max-width: 900px;
   margin-right: 200px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 @media (max-width: 1023px) {
   .crackers-img {
@@ -5458,6 +5453,7 @@ textarea.form-control {
   position: absolute;
   width: 30%;
   z-index: -1;
+  opacity: 0;
 }
 @media (max-width: 1023px) {
   .crackers-lemon {
@@ -5466,7 +5462,7 @@ textarea.form-control {
 }
 .crackers-lemon:nth-of-type(1) {
   top: 0;
-  left: 35%;
+  left: 30%;
 }
 @media (max-width: 1023px) {
   .crackers-lemon:nth-of-type(1) {
@@ -5495,68 +5491,68 @@ textarea.form-control {
     top: 70%;
   }
 }
+.crackers-lemon:nth-of-type(4) {
+  top: 0%;
+  left: 0%;
+}
+@media (max-width: 1023px) {
+  .crackers-lemon:nth-of-type(4) {
+    left: 10%;
+    top: 70%;
+  }
+}
 
 .fp-section.active .crackers-lemon:nth-of-type(1) {
-  animation: bouneSizeHide 4s ease;
+  animation: bouneSizeHide 1.8s ease;
+  animation-delay: 1.2s;
   animation-fill-mode: forwards;
 }
 .fp-section.active .crackers-lemon:nth-of-type(2) {
-  animation: bouneSize 4s ease;
-  animation-delay: 2s;
+  animation: bouneSize 3s ease;
+  animation-delay: 2.9s;
   transform-origin: center;
   animation-fill-mode: forwards;
 }
 .fp-section.active .crackers-lemon:nth-of-type(3) {
-  animation: bouneSizeHide 4s ease-in;
-  animation-delay: 1s;
+  animation: bouneSizeHide 1.8s ease-in;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+.fp-section.active .crackers-lemon:nth-of-type(4) {
+  animation: bouneSizeHide 1.8s ease;
+  animation-delay: 1.2s;
   animation-fill-mode: forwards;
 }
 
 @keyframes bouneSize {
   0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  10% {
+    opacity: 1;
     transform: scale(1);
-  }
-  30% {
-    transform: scale(0.6);
-  }
-  32% {
-    transform: scale(0.7);
-  }
-  34% {
-    transform: scale(0.6);
-  }
-  60% {
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(0.6);
   }
   100% {
+    opacity: 1;
     transform: scale(1);
   }
 }
 @keyframes bouneSizeHide {
   0% {
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(0);
+  }
+  10% {
     opacity: 1;
-  }
-  30% {
-    transform: scale(0.6);
-  }
-  32% {
-    transform: scale(0.7);
-  }
-  34% {
-    transform: scale(0.6);
-  }
-  60% {
     transform: scale(1);
   }
-  80% {
-    transform: scale(0.6);
+  95% {
+    opacity: 1;
+    transform: scale(1);
   }
   100% {
-    transform: scale(0);
     opacity: 0;
+    transform: scale(0);
   }
 }/*# sourceMappingURL=style.css.map */
