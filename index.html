@@ -3,22 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
   <link rel="stylesheet" href="css/style.css">
@@ -152,10 +141,26 @@
                 СУХАРИ ПАНИРОВОЧНЫЕ <br>
                 ПАНКО / PANKO 
               </div>
-              <picture class="section__img">
-                <source srcset="images/img-1-mob.png" media="(max-width: 767px)">
-                <img src="images/img-1.png" alt="">
-              </picture>
+
+              <div class="section__img">
+                <div class="crackers">
+                  <div class="crackers-img">
+                    <source srcset="images/crackers-mob.png" media="(max-width: 767px)">
+                    <img src="images/cracker.png" alt="">
+                  </div>
+                  <div class="crackers-lemons">
+                    <div class="crackers-lemon">
+                      <img src="images/lemon.svg" alt="">
+                    </div>
+                    <div class="crackers-lemon">
+                      <img src="images/lemon.svg" alt="">
+                    </div>
+                    <div class="crackers-lemon">
+                      <img src="images/lemon.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="section-action">
                 <div class="section__btn btn">
                   Обратная связь
@@ -203,10 +208,27 @@
               <div class="section__title">
                 ЛАПША <br> УДОН
               </div>
-              <picture class="section__img">
-                <source srcset="images/img-2-mob.png" media="(max-width: 767px)">
-                <img src="images/img-2.png" alt="">
-              </picture>
+             
+              <div class="section__img">
+                <div class="udon">
+                  <div class="udon-img">
+                    <source srcset="images/img-2-mob.png" media="(max-width: 767px)">
+                    <img src="images/udon-big.png" alt="">
+                  </div>
+                  <div class="udon-lines">
+                    <img src="images/vawe.svg" alt="">
+                  </div>
+                  <div class="udon-lines">
+                    <img src="images/vawe.svg" alt="">
+                  </div>
+                  <div class="udon-lines">
+                    <img src="images/vawe.svg" alt="">
+                  </div>
+                  <div class="udon-lines">
+                    <img src="images/vawe.svg" alt="">
+                  </div>
+                </div>
+              </div>
               <div class="section-action">
                 <div class="section__btn btn">
                   Обратная связь
@@ -257,10 +279,25 @@
                 КЛАРИЙ <br>
                 УГРЕВИДНЫЙ
               </div>
-              <picture class="section__img">
-                <source srcset="images/img-3-mob.png" media="(max-width: 767px)">
-                <img src="images/img-3.png" alt="">
-              </picture>
+              <div class="section__img">
+                <div class="crackers">
+                  <div class="crackers-img">
+                    <source srcset="images/el-img-mob.png" media="(max-width: 767px)">
+                    <img src="images/el-img.png" alt="">
+                  </div>
+                  <div class="crackers-lemons">
+                    <div class="crackers-lemon">
+                      <img src="images/lemon.svg" alt="">
+                    </div>
+                    <div class="crackers-lemon">
+                      <img src="images/lemon.svg" alt="">
+                    </div>
+                    <div class="crackers-lemon">
+                      <img src="images/lemon.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="section-action">
                 <div class="section__btn btn">
                   Обратная связь
@@ -313,7 +350,24 @@
                 в РФ и снг
               </div>
               <picture class="section__img">
-                <img src="images/img-5.png" alt="">
+                <div class="map">
+                  <img src="images/map/map.png" alt="">
+                  <div class="map-pin parallax-layer" data-speed="15">
+                    <img src="images/map/map-people-1.png" alt="">
+                  </div>
+                  <div class="map-pin parallax-layer" data-speed="20">
+                    <img   src="images/map/map-people-2.png" alt="">
+                  </div>
+                  <div class="map-pin parallax-layer" data-speed="-20">
+                    <img src="images/map/map-people-3.png" alt="">
+                  </div>
+                  <div class="map-pin parallax-layer" data-speed="18">
+                    <img src="images/map/map-people-4.png" alt="">
+                  </div>
+                  <div class="map-pin parallax-layer" data-speed="-14">
+                    <img src="images/map/map-people-5.png" alt="">
+                  </div>
+                </div>
               </picture>
               <div class="section__desc">
                 Бесплатная доставка по РФ от 500 кг.<br>
