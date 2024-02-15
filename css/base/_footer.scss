@@ -1,6 +1,25 @@
 .footer {
   padding: 40px 0;
 
+  @include media-md("down") {
+    padding: 32px 0 100px;
+  }
+
+  &.s-footer {
+    @include media-md("down") {
+      padding: 70px 0;
+
+      .footer-bottom {
+        display: block;
+        padding-bottom: 160px;
+      }
+
+      .footer__logo {
+        margin-top: 24px;
+      }
+    }
+  }
+
   &-top {
     width: 100%;
     display: flex;
@@ -68,7 +87,7 @@
         text-decoration: none;
       }
 
-      @include media-md('down') {
+      @include media-md("down") {
         &:nth-of-type(1) {
           order: 2;
         }
@@ -140,7 +159,7 @@
     text-decoration: none;
     color: $black;
     font-size: 14px;
-    
+
     line-height: 1.5;
 
     span {
@@ -152,7 +171,7 @@
       order: 0;
     }
 
-    @media(max-width: 374px) {
+    @media (max-width: 374px) {
       font-size: 10px;
 
       span {
@@ -186,7 +205,7 @@
     &.btn {
       margin-left: 8px;
 
-      @media(max-width: 374px) {
+      @media (max-width: 374px) {
         margin-left: 0;
       }
     }
@@ -195,8 +214,7 @@
       display: none;
     }
 
-    @include media-md('down') {
-
+    @include media-md("down") {
       .desc {
         display: none;
       }
@@ -205,13 +223,11 @@
         display: block;
       }
     }
-
-    
   }
 
   &-bottom {
     width: 100%;
-    margin-top: 20px;
+
     padding-top: 20px;
     display: flex;
     align-items: center;
@@ -270,21 +286,21 @@
   }
 }
 
-.footer.fp-auto-height.fp-section {
+// .footer.fp-auto-height.fp-section {
 
-  @include media-md('down') {
+//   @include media-md('down') {
 
-    .container {
-      height: 100vh;
-      overflow-y: scroll !important;
-      padding-bottom: 120px;
-    }
-  }
-}
+//     .container {
+//       height: 100vh;
+//       overflow-y: scroll !important;
+//       padding-bottom: 120px;
+//     }
+//   }
+// }
 
-.footer.fp-auto-height .fp-tableCell {
-  @include media-md('down') {
-    height: 100vh !important;
+// .footer.fp-auto-height .fp-tableCell {
+//   @include media-md('down') {
+//     height: 100vh !important;
 
-  }
-}
+//   }
+// }

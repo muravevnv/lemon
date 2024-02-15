@@ -1,40 +1,58 @@
+// $("#fullpage").fullpage({
+//   scrollOverflow: true,
+//   scrollOverflowReset: true,
+//   onScrollOverflow: function (section, slide, position, direction) {
+//     var params = {
+//       section: section,
+//       slide: slide,
+//       position: position,
+//       direction: direction,
+//     };
 
-// fullpage customization
-$('#fullpage').fullpage({
+//     console.log("--- onScrollOverflow ---");
+//     console.log(params);
+//   },
+//   beforeLeave: function (section) {
+//     console.log(section)
+//   },
+// });
 
-  navigation: true,
-  // onLeave: function(index, nextIndex, direction){
-  //   //leaving 1st section
-  //   if(index == 3){
-  //      $('.header').addClass('header--grey');
-  //   }
-  //   //back to the 1st section
-  //   if(nextIndex == 3){
-  //       $('.header').removeClass('header--grey');
-  //   }
-  // } 
+var myFullpage = new fullpage('#fullpage', {
+  // scrollOverflow: true,
+  // scrollOverflowReset: true,
+  // onScrollOverflow: function (section, slide, position, direction) {
+  //   var params = {
+  //     section: section,
+  //     slide: slide,
+  //     position: position,
+  //     direction: direction,
+  //   };
 
-}); 
-
-
+  //   console.log("--- onScrollOverflow ---");
+  //   console.log(params);
+  // },
+  beforeLeave: function (section) {
+    console.log(section)
+  },
+});
 
 // phone mask
 
-$(".js-phone").inputmask({"mask": "+7(999) 999-9999"});
+$(".js-phone").inputmask({ mask: "+7(999) 999-9999" });
 
 // modal
 
-$('.js-open-modal').on('click', () => {
-  $('.modal').show();
-})
+$(".js-open-modal").on("click", () => {
+  $(".modal").show();
+});
 
-$(document).on('click', '.modal__close', () => {
-  $('.modal').hide();
-})
+$(document).on("click", ".modal__close", () => {
+  $(".modal").hide();
+});
 
-$(document).on('click','.modal-overlay', () => {
-  $('.modal').hide();
-})
+$(document).on("click", ".modal-overlay", () => {
+  $(".modal").hide();
+});
 
 if (window.matchMedia("(min-width: 1024px)").matches) {
   $(window).on("mousemove", function (e) {
@@ -61,4 +79,4 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
   });
 }
 
-console.log($(".parallax-layer"))
+console.log($(".parallax-layer"));
