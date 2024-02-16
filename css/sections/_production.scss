@@ -1,0 +1,128 @@
+.production {
+  padding: 100px 0;
+
+  @include media-lg('down') {
+    padding: 60px 0;
+  }
+
+  @include media-md('down') {
+    padding: 32px 0;
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    padding: 115px 0;
+    padding-right: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include media-xl('down') {
+      gap: 24px;
+    }
+
+    @include media-lg('down') {
+      padding: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media(max-width: 1600px) {
+      max-width: 600px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include media-xl('down')  {
+      max-width: 400px;
+    }
+
+    @include media-lg('down') {
+      position: static;
+      transform: translateY(0);
+      margin: 0 auto;
+    }
+  }
+
+  &__advantages {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 50px;
+
+    @include media-xl('down') {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @include media-lg('down') {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-lg('down') {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    @include media-md('down') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @include media-lg('down') {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      @include media-md('down') {
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
+
+    &-item-desc {
+      font-size: 14px;
+      font-weight: 600;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include media-md('down') {
+      > * {
+        width: 100%;
+      }
+    }
+
+    @media(max-width: 495px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+    padding: 14px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    color: $black;
+  }
+}

@@ -231,3 +231,234 @@
   line-height: 1.6;
   font-weight: 600;
 }
+
+.product-nav {
+  overflow: hidden;
+  padding: 32px 0;
+  background-color: #F2F3F4;
+
+  
+  .container {
+    max-width: 1390px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 8px;
+    border-radius: 100px;
+    background-color: $white;
+    position: relative;
+
+    @include media-md('down') {
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -32px;
+      left: -32px;
+      width: 72px;
+      height: 72px;
+      background: url('../images/decor/decor-leaf.png') center center / 72px no-repeat;
+
+      @include media-xl('down')  {
+        width: 48px;
+        height: 48px;
+        background-size: 48px;
+        top: -10px;
+        left: -10px;
+      }
+
+      @include media-md('down') {
+        display: none;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: -24px;
+      right: -90px;
+      width: 140px;
+      height: 140px;
+      background: url('../images/decor/decor-tea.png') center center / 140px no-repeat;
+
+      @include media-xl('down')  {
+        width: 64px;
+        height: 64px;
+        background-size: 64px;
+        top: 16px;
+        right: -16px;
+      }
+
+      @include media-md('down') {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    padding: 16px 32px;
+    gap: 32px;
+    cursor: pointer;
+    color: $black;
+
+    @include media-xl('down') {
+      padding: 16px;
+      gap: 16px;
+    }
+
+    @include media-md('down') {
+      min-width: 260px;
+      padding: 12px;
+    }
+
+    &.is-selected {
+      background-color: $primary;
+    }
+
+    &-img {
+      --size: 56px;
+      width: var(--size);
+      height: var(--size);
+
+      @include media-xl('down')  {
+        --size: 32px;
+      }
+    }
+
+    &-name {
+      font-size: 18px;
+      font-weight: 600;
+
+      @include media-xl('down')  {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
+.product-list {
+  padding: 100px 0;
+
+  @include media-xxl('down')  {
+    padding: 64px 0;
+  } 
+
+  @include media-lg('down') {
+    padding: 40px 0;
+  }
+
+  .container {
+    max-width: 1580px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    @include media-xxl('down') {
+      gap: 24px;
+    }
+
+    @include media-lg('down') {
+      display: flex;
+      align-items: stretch;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include media-xxl('down')  {
+      gap: 24px;
+      padding: 32px;
+    }
+
+    @include media-lg('down') {
+      width: 50%;
+      flex-shrink: 0;
+      padding: 24px;
+    }
+
+    @include media-md('down') {
+      width: 100%;
+      gap: 16px;
+    }
+
+    @media(max-width: 495px) {
+      padding: 0;
+    }
+
+    &-img {
+
+      @include media-lg('down') {
+        max-width: 300px;
+      }
+      
+      @include media-md('down') {
+        margin: 0 auto;
+      }
+    }
+
+    &-name {
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      min-height: 126px;
+
+      
+      @include media-xxl('down')  {
+        font-size: 24px;
+        min-height: initial;
+      } 
+    }
+
+    &-action {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @include media-xxl('down')  {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      
+      @include media-md('down') {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media(max-width: 495px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-link {
+      font-weight: 500;
+      text-align: center;
+      color: $black;
+    }
+  }
+}

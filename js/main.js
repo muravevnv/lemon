@@ -1,38 +1,6 @@
-// $("#fullpage").fullpage({
-//   scrollOverflow: true,
-//   scrollOverflowReset: true,
-//   onScrollOverflow: function (section, slide, position, direction) {
-//     var params = {
-//       section: section,
-//       slide: slide,
-//       position: position,
-//       direction: direction,
-//     };
-
-//     console.log("--- onScrollOverflow ---");
-//     console.log(params);
-//   },
-//   beforeLeave: function (section) {
-//     console.log(section)
-//   },
-// });
 
 var myFullpage = new fullpage('#fullpage', {
-  // scrollOverflow: true,
-  // scrollOverflowReset: true,
-  // onScrollOverflow: function (section, slide, position, direction) {
-  //   var params = {
-  //     section: section,
-  //     slide: slide,
-  //     position: position,
-  //     direction: direction,
-  //   };
-
-  //   console.log("--- onScrollOverflow ---");
-  //   console.log(params);
-  // },
   beforeLeave: function (section) {
-    console.log(section)
   },
 });
 
@@ -78,5 +46,3 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
     });
   });
 }
-
-console.log($(".parallax-layer"));

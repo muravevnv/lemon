@@ -230,6 +230,13 @@
   }
 }
 
+.fp-overflow {
+
+  @include media-md('down') {
+    height: 100%;
+  }
+}
+
 
 .section--full-img {
 
