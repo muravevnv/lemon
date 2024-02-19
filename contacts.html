@@ -10,10 +10,10 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/fullpage.min.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <title>Document</title>
+  <title>Leemon</title>
 </head>
 
 <body>
@@ -60,9 +60,9 @@
               fill="black" />
           </svg>
         </a>
-        <div class="header__btn btn js-open-modal">
+        <a href="#callback-modal" data-fancybox class="header__btn btn">
           Обратный звонок
-        </div>
+        </a>
       </div>
     </div>
   </header>
@@ -250,14 +250,9 @@
       <span>Контакты</span>
     </div>
   </div>
-  <div class="modal">
+  <div class="modal" id="callback-modal">
     <div class="modal-overlay"></div>
     <div class="modal-content">
-      <div class="modal__close">
-        <svg width="16" height="16">
-          <use xlink:href="images/sprite.svg#close"></use>
-        </svg>
-      </div>
       <!-- <div class="modal-bg">
         <img src="images/pattern.svg" alt="">
       </div> -->
@@ -304,6 +299,7 @@
   </div>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.inputmask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="js/fullpage.min.js"></script>
   <script src="js/main.js"></script>
 </body>

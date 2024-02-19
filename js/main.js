@@ -1,8 +1,4 @@
 
-var myFullpage = new fullpage('#fullpage', {
-  beforeLeave: function (section) {
-  },
-});
 
 // phone mask
 
@@ -21,6 +17,16 @@ $(document).on("click", ".modal__close", () => {
 $(document).on("click", ".modal-overlay", () => {
   $(".modal").hide();
 });
+
+
+$('[data-acc-toggle]').on('click', function () {
+  const accParent = $(this).closest('[data-acc]');
+  const accContent = accParent.find('[data-acc-content]');
+  accContent.slideToggle();
+  accParent.toggleClass('is-open');
+});
+
+console.log('123')
 
 if (window.matchMedia("(min-width: 1024px)").matches) {
   $(window).on("mousemove", function (e) {
@@ -46,3 +52,9 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
     });
   });
 }
+
+
+var myFullpage = new fullpage('#fullpage', {
+  beforeLeave: function (section) {
+  },
+});
