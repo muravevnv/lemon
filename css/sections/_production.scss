@@ -124,5 +124,17 @@
     gap: 16px;
     text-decoration: none;
     color: $black;
+
+    svg {
+      transition: .25s;
+      transform: translateX(0);
+    }
+
+    &:hover {
+      svg {
+        transition: .25s;
+        transform: translateX(5px);
+      }
+    }
   }
 }

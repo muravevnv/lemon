@@ -61,7 +61,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $black;
+      background-color: $secondary;
       width: 6px;
       border-radius: 100px;
     }
@@ -87,6 +87,7 @@
       .order__item-head {
         background-color: $primary;
         border-color: $primary;
+        color: $white;
       }
 
       .order__item-content {
@@ -95,6 +96,7 @@
 
       .order__item-head-toggler {
         background-color: $white;
+        color: $black;
         transform: rotate(180deg);
       }
     }
@@ -120,12 +122,19 @@
     width: 40px;
     height: 40px;
     flex-shrink: 0;
-    background-color: $primary;
+    background-color: $secondary;
+    color: $white;
     border-radius: 50%;
-    background-image: url("../images/icons/arrow.svg");
-    background-position: center center;
-    background-size: 16px;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      transform: rotate(90deg);
+    }
   }
 
   &__item-head-preview {
@@ -255,7 +264,7 @@
 
   &__item-pack {
     padding: 5px 8px;
-    background: #f2f3f4;
+    background: $secondary-light;
     border-radius: 100px;
     text-align: center;
     font-weight: 600;

@@ -136,19 +136,35 @@
   }
 
   &__link {
-    svg {
-      display: block;
-      width: 32px;
-      height: 32px;
-    }
-
-    @include media-md("down") {
-      order: 4;
+    display: block;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1.182px solid $grey-l;
+    color: $secondary;
+    cursor: pointer;
+    transition: $transition;
+    
+    @media(max-width: 1600px){
+      width: 40px;
+      height: 40px;
 
       svg {
         width: 24px;
         height: 24px;
       }
+    }
+
+    &:hover {
+      transition: $transition;
+      background-color: $secondary-light;
+    }
+
+    @include media-md("down") {
+      order: 4;
     }
   }
 
@@ -183,12 +199,12 @@
   &__mail {
     padding: 8px 16px;
     border-radius: 24px 0px;
-    background: var(--Grey-Light, #f2f3f4);
+    background: $secondary;
+    color: $white;
     display: block;
     text-decoration: none;
-    color: $black;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     transition: $transition;
 
     &:hover {

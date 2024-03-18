@@ -223,8 +223,9 @@ textarea.form-control {
     background: $bg;
     transition: $transition;
     padding: 14px 32px;
+    gap: 16px;
     background-color: $primary;
-    color: $black;
+    color: $white;
     text-align: center;
     border-radius: 32px 0;
 
@@ -241,6 +242,13 @@ textarea.form-control {
     &--black {
         background-color: $black;
         color: $white;
+    }
+
+    &--outline {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+
     }
 
 }

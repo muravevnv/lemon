@@ -101,6 +101,7 @@
 
     &.is-selected {
       background-color: $primary;
+      color: $white;
     }
 
     @media (any-hover: hover) {
@@ -153,6 +154,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: $secondary-light;
+      border-radius: 50%;
 
       @include media-md("down") {
         --size: 32px;
@@ -164,6 +167,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
 
     @include media-md("down") {
@@ -172,9 +176,10 @@
   }
 
   &__from-developer {
+    width: auto;
     padding: 4px 16px;
     border-radius: 100px;
-    border: 3px solid #f2f3f4;
+    border: 3px solid $secondary;
     font-size: 14px;
     font-weight: 600;
   }
@@ -203,7 +208,7 @@
       width: 40px;
       height: 40px;
       padding: 8px;
-      background-color: $grey-l;
+      background-color: $secondary-light;
       border-radius: 50%;
       flex-shrink: 0;
     }
@@ -226,7 +231,8 @@
   padding: 5px 8px;
   border-radius: 100px;
   gap: 10px;
-  background: $grey-l;
+  background: $secondary-light;
+  text-align: center;
   font-size: 14px;
   line-height: 1.6;
   font-weight: 600;
@@ -235,9 +241,8 @@
 .product-nav {
   overflow: hidden;
   padding: 32px 0;
-  background-color: #F2F3F4;
+  background-color: $secondary;
 
-  
   .container {
     max-width: 1390px;
   }
@@ -251,7 +256,7 @@
     background-color: $white;
     position: relative;
 
-    @include media-md('down') {
+    @include media-md("down") {
       overflow-x: auto;
 
       &::-webkit-scrollbar {
@@ -261,14 +266,15 @@
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       top: -32px;
       left: -32px;
       width: 72px;
       height: 72px;
-      background: url('../images/decor/decor-leaf.png') center center / 72px no-repeat;
+      background: url("../images/decor/decor-leaf.png") center center / 72px
+        no-repeat;
 
-      @include media-xl('down')  {
+      @include media-xl("down") {
         width: 48px;
         height: 48px;
         background-size: 48px;
@@ -276,21 +282,22 @@
         left: -10px;
       }
 
-      @include media-md('down') {
+      @include media-md("down") {
         display: none;
       }
     }
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       top: -24px;
       right: -90px;
       width: 140px;
       height: 140px;
-      background: url('../images/decor/decor-tea.png') center center / 140px no-repeat;
+      background: url("../images/decor/decor-tea.png") center center / 140px
+        no-repeat;
 
-      @include media-xl('down')  {
+      @include media-xl("down") {
         width: 64px;
         height: 64px;
         background-size: 64px;
@@ -298,7 +305,7 @@
         right: -16px;
       }
 
-      @include media-md('down') {
+      @include media-md("down") {
         display: none;
       }
     }
@@ -312,19 +319,26 @@
     gap: 32px;
     cursor: pointer;
     color: $black;
+    transition: $transition;
 
-    @include media-xl('down') {
+    @include media-xl("down") {
       padding: 16px;
       gap: 16px;
     }
 
-    @include media-md('down') {
+    @include media-md("down") {
       min-width: 260px;
       padding: 12px;
     }
 
     &.is-selected {
       background-color: $primary;
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
     }
 
     &-img {
@@ -332,7 +346,7 @@
       width: var(--size);
       height: var(--size);
 
-      @include media-xl('down')  {
+      @include media-xl("down") {
         --size: 32px;
       }
     }
@@ -341,22 +355,21 @@
       font-size: 18px;
       font-weight: 600;
 
-      @include media-xl('down')  {
+      @include media-xl("down") {
         font-size: 14px;
       }
     }
   }
 }
 
-
 .product-list {
   padding: 100px 0;
 
-  @include media-xxl('down')  {
+  @include media-xxl("down") {
     padding: 64px 0;
-  } 
+  }
 
-  @include media-lg('down') {
+  @include media-lg("down") {
     padding: 40px 0;
   }
 
@@ -369,11 +382,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
 
-    @include media-xxl('down') {
+    @include media-xxl("down") {
       gap: 24px;
     }
 
-    @include media-lg('down') {
+    @include media-lg("down") {
       display: flex;
       align-items: stretch;
       overflow-x: auto;
@@ -390,33 +403,32 @@
     flex-direction: column;
     gap: 32px;
 
-    @include media-xxl('down')  {
+    @include media-xxl("down") {
       gap: 24px;
       padding: 32px;
     }
 
-    @include media-lg('down') {
+    @include media-lg("down") {
       width: 50%;
       flex-shrink: 0;
       padding: 24px;
     }
 
-    @include media-md('down') {
+    @include media-md("down") {
       width: 100%;
       gap: 16px;
     }
 
-    @media(max-width: 495px) {
+    @media (max-width: 495px) {
       padding: 0;
     }
 
     &-img {
-
-      @include media-lg('down') {
+      @include media-lg("down") {
         max-width: 300px;
       }
-      
-      @include media-md('down') {
+
+      @include media-md("down") {
         margin: 0 auto;
       }
     }
@@ -427,11 +439,10 @@
       text-transform: uppercase;
       min-height: 126px;
 
-      
-      @include media-xxl('down')  {
+      @include media-xxl("down") {
         font-size: 24px;
         min-height: initial;
-      } 
+      }
     }
 
     &-action {
@@ -439,18 +450,17 @@
       align-items: center;
       gap: 16px;
 
-      @include media-xxl('down')  {
+      @include media-xxl("down") {
         flex-wrap: wrap;
         justify-content: center;
       }
-      
-      
-      @include media-md('down') {
+
+      @include media-md("down") {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @media(max-width: 495px) {
+      @media (max-width: 495px) {
         grid-template-columns: 1fr;
       }
     }

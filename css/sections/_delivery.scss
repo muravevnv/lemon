@@ -26,7 +26,8 @@
     display: flex;
     align-items: stretch;
     gap: 40px;
-    background-color: $primary;
+    background-color: $secondary;
+    color: $white;
 
     @include media-xxl("down") {
       padding: 24px;

@@ -54,7 +54,10 @@
     display: flex;
     align-items: stretch;
     gap: 40px;
-    background-color: $primary;
+    background: 
+    linear-gradient(291.66deg, #56BB97 -82.23%, #298E6A 28.7%);
+    color: $white;
+
 
     @include media-xl("down") {
       padding: 24px;
@@ -137,6 +140,11 @@
     font-weight: 600;
     text-decoration: none;
     color: $black;
+    transition: $transition;
+
+    &:hover {
+      color: $secondary;
+    }
 
     + .contacts__item {
       margin-top: 16px;
