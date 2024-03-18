@@ -38,6 +38,11 @@
   align-items: center;
   border-radius: 32px;
   border: 1px solid $grey-l;
+  transition: .25s;
+
+  &:hover {
+    border-color: $grey;
+  }
 
   @include media-md('down') {
     border-radius: 24px;

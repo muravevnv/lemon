@@ -4967,6 +4967,10 @@ textarea.form-control {
   top: 30px;
   right: 30px;
   opacity: 1;
+  transition: 0.3s;
+}
+.fancybox-button.fancybox-close-small:hover {
+  background-color: #56BB97;
 }
 @media screen and (max-width: 767.98px) {
   .fancybox-button.fancybox-close-small {
@@ -6475,6 +6479,10 @@ textarea.form-control {
   align-items: center;
   border-radius: 32px;
   border: 1px solid #F2F3F4;
+  transition: 0.25s;
+}
+.catalog-item:hover {
+  border-color: #BFC3C9;
 }
 @media screen and (max-width: 767.98px) {
   .catalog-item {

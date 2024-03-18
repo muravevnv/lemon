@@ -29,6 +29,11 @@ body {
   top: 30px;
   right: 30px;
   opacity: 1;
+  transition: $transition;
+
+  &:hover {
+    background-color: $secondary;
+  }
 
   @include media-md("down") {
     width: 36px;
